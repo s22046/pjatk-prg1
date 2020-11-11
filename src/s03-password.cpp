@@ -4,7 +4,9 @@
 auto main() -> int
 {
     auto entered_password = std::string{};
-    std::string password = "H";
+    auto password = std::string{};
+    std::cout << "Please set password:";
+    std::getline(std::cin, password);    
 
     do
     {    
