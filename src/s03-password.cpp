@@ -10,9 +10,9 @@ auto main() -> int
 
     do
     {    
-    std::cout << " Password:";
+        std::cout << " Password:";
 
-    std::getline(std::cin, entered_password);
+        std::getline(std::cin, entered_password);
     
     } while (entered_password != password);
 
