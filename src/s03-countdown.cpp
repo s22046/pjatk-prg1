@@ -3,15 +3,18 @@
 
 auto main() -> int
 {
-
-    std::cout << "countdown start from:";
+    std::cout << " Countdown start from:";
     auto countdownstart = std::string{};
-
-    for(i=countdownstart;i=0;i--)
-    {    
     std::getline(std::cin, countdownstart);
-    std::cout << i;
+    auto countstart = std::stoi(countdownstart);
+    
+
+    for(int i = countstart;i>=0;i--)
+    {    
+       std::cout << i << "\n";
+       
     }
 
-
     return 0;
+
+}
