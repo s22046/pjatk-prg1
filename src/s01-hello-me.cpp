@@ -8,6 +8,6 @@
 
 auto main() -> int
 {
-    std::cout << "Hello, Michal!\n";
+    std::cout << "Hello, Michał!\n";
     return 0;
 }
