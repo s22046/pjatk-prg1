@@ -63,7 +63,7 @@ void MrChar::mvdown()
     {   
         if (personality == 2)
         {
-            yLoc = 0;
+            yLoc = 1;
         } else
         {
             yLoc = yMax-2;
@@ -116,17 +116,6 @@ void MrChar::display()
 {
     mvwaddch(curwin,yLoc, xLoc,charakter);
 }
-
-//void MrChar::printLocyx()
-//{
-//    if (KEY_ENTER)
- //   {
- //   mvwprintw()
- //   mvwprintw(
-  //  wrefresh(curwin);
- //   }
-//}
-
 
 #endif
 
