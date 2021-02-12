@@ -13,6 +13,7 @@ int main() {
   curs_set(0);
 
   // initial menu
+  while(1){
   WINDOW *win = newwin(10, 20, 5, 5);
   box(win, 0, 0);
   refresh();
@@ -128,6 +129,11 @@ int main() {
       mvwprintw(msgbox, 2, 2, "Collision! Game over!");
       wrefresh(msgbox);
       mvwprintw(playwin, 10, 40, "Oh NO!");
+      nocbreak();
+      cbreak();
+      getch();
+      clear();
+      break;
     }
     if (target->iscolliding(p)) {
       wclear(msgbox);
@@ -135,9 +141,14 @@ int main() {
       mvwprintw(msgbox, 2, 2, "Winner! You got to the other side!");
       wrefresh(msgbox);
       mvwprintw(playwin, 10, 40, "YEAH!");
+      nocbreak();
+      cbreak();
+      getch();
+      clear();
+      break;
     }
   }
-
+  }
   // waiting before exit
   getch();
   endwin();
