@@ -1,5 +1,5 @@
 
-#include "player.h"
+#include "Project.h"
 #include <stdlib.h>
 #include <ncurses.h>
 #include <string>
