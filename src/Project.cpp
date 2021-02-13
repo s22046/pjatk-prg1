@@ -14,11 +14,37 @@ int main() {
 
   // initial menu
   while(1){
-  WINDOW *win = newwin(10, 20, 5, 5);
-  box(win, 0, 0);
+  WINDOW *menu = newwin(10, 20, 20, 20);
+  box(menu, 0, 0);
+  refresh();
+  printw(
+      "#================================================================#\n");
+  printw(
+      "           ### ### ### ### ### ###                                \n");
+  printw(
+      "           #    #  # # #   #    #                                 \n");
+  printw(
+      "           ###  #  ### ### ###  #                                 \n");
+  printw(
+      "             #  #  ##  #   #    #                                 \n");
+  printw(
+      "           ###  #  # # ### ###  #                                 \n");
+  printw(
+      "                         ### ### ### ### ### # #  # ####          \n");
+  printw(
+      "                         #   # # # # #   #   # ## # #             \n");
+  printw(
+      "                         #   ### # # ### ### # # ## # ##          \n");
+  printw(
+      "                         #   ##  # #   #   # # #  # #  #          \n");
+  printw(
+      "                         ### # # ### ### ### # #  # ####          \n");
+  printw(
+      "#================================================================#\n");
   refresh();
 
-  keypad(win, true);
+
+  keypad(menu, true);
   std::string menuchoices[2]{"Start Game", "Quit"};
   int choice;
   int highlight = 0;
@@ -26,11 +52,11 @@ int main() {
   while (1) {
     for (int i = 0; i < 2; i++) {
       if (i == highlight)
-        wattron(win, A_BOLD);
-      mvwprintw(win, i + 1, 1, menuchoices[i].c_str());
-      wattroff(win, A_BOLD);
+        wattron(menu, A_BOLD);
+      mvwprintw(menu, i + 1, 1, menuchoices[i].c_str());
+      wattroff(menu, A_BOLD);
     }
-    choice = wgetch(win);
+    choice = wgetch(menu);
 
     switch (choice) {
     case KEY_UP:
@@ -51,6 +77,10 @@ int main() {
     if (choice == 10) {
       break;
     }
+  //if (highlight == 1)
+  //  {
+  //  exit();
+  //  } 
   }
   clear();
 
